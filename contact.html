@@ -33,7 +33,8 @@
   fbq('init', '889700214122278');
   fbq('track', 'PageView');
   fbq('track', 'ViewContent', {content_name: 'Contact'});
-</script>
+</script
+  
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=889700214122278&ev=PageView&noscript=1"/></noscript>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -453,6 +454,39 @@ const cf=document.getElementById('cf');
 if(cf){cf.addEventListener('submit',e=>{e.preventDefault();
 const btn=cf.querySelector('[type=submit]');btn.textContent='Sending…';btn.disabled=true;
 setTimeout(()=>{cf.innerHTML='<div style="text-align:center;padding:48px 24px;"><div style="font-size:3rem;margin-bottom:16px;">✅</div><h3 style="font-family:Clash Display,sans-serif;font-size:1.4rem;font-weight:700;color:#F0F6FF;margin-bottom:10px;">Message Received!</h3><p style="color:#8B9DC4;margin-bottom:24px;">We will reply within 1 business day. For urgent queries, WhatsApp us directly.</p><a href="https://wa.me/918607070505" class="btn-wa" style="display:inline-flex;margin:0 auto;" onclick="gtag(\'event\',\'contact_click\',{\'method\':\'whatsapp\'});fbq(\'track\',\'Contact\',{content_name:\'whatsapp\'});">💬 Continue on WhatsApp</a></div>';},1200);});}
+// Form submission
+document.getElementById('cf').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('cf-submit');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  const formData = new FormData(this);
+  const data = Object.fromEntries(formData);
+
+  try {
+    const res = await fetch('https://formspree.io/f/xykngvlj', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (res.ok) {
+      btn.textContent = '✓ Message Sent!';
+      btn.style.background = '#10B981';
+      this.reset();
+    } else {
+      throw new Error('Failed');
+    }
+  } catch(err) {
+    btn.textContent = 'Failed — Try Again';
+    btn.style.background = '#EF4444';
+    btn.disabled = false;
+  }
+});
 </script>
 
 </body>
