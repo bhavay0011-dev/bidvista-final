@@ -276,46 +276,55 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
 <section class="sec">
   <div class="wrap">
     <div class="contact-grid">
-      <!-- FORM -->
-      <Form
-      action="https://formspree.io/f/xykngvlj"
-  method="POST"
->
-      <div class="r">
-        <div class="contact-card">
-          <div class="eyebrow">Send a Message</div>
-          <h2 style="font-family:Clash Display,sans-serif;font-size:1.5rem;font-weight:700;color:var(--white);letter-spacing:-.04em;margin-bottom:6px;">Tell us about your account</h2>
-          <p style="font-size:.875rem;color:var(--muted2);margin-bottom:28px;line-height:1.6;">We will reply within 1 business day. For faster responses, use WhatsApp.</p>
-          <form id="cf">
-            <div class="form-row">
-              <div class="form-group"><label>Your Name *</label><input type="text" placeholder="Ravi Kumar" required></div>
-              <div class="form-group"><label>Email Address *</label><input type="email" placeholder="you@example.com" required></div>
-            </div>
-            <div class="form-group"><label>Brand / Business Name</label><input type="text" placeholder="Your Amazon brand"></div>
-            <div class="form-row">
-              <div class="form-group"><label>Primary Marketplace</label>
-                <select>
-                  <option>Amazon India</option>
-                  <option>Amazon US</option>
-                  <option>Amazon UK</option>
-                  <option>Amazon UAE</option>
-                  <option>Multiple</option>
-                </select>
-              </div>
-              <div class="form-group"><label>Monthly Ad Spend (approx.)</label>
-                <select>
-                  <option>Under ₹40,000</option>
-                  <option>₹40,000 – ₹1L</option>
-                  <option>₹1L – ₹3L</option>
-                  <option>₹3L – ₹10L</option>
-                  <option>₹10L+</option>
-                </select>
-              </div>
-            </div>
-            <div class="form-group"><label>What's your biggest PPC challenge? *</label><textarea placeholder="Describe your current situation — high ACOS, poor launch results, messy account structure, or anything else." required></textarea></div>
-            <div class="form-group"><label>Phone / WhatsApp (optional)</label><input type="tel" placeholder="+91 98765 43210"></div>
-            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:15px;">Send Message →</button>
-          </form>
+      <form id="cf" action="https://formspree.io/f/xykngvlj" method="POST">
+  <div class="form-row">
+    <div class="form-group">
+      <label>Your Name *</label>
+      <input type="text" name="name" placeholder="Ravi Kumar" required>
+    </div>
+    <div class="form-group">
+      <label>Email Address *</label>
+      <input type="email" name="email" placeholder="you@example.com" required>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Brand / Business Name</label>
+    <input type="text" name="brand" placeholder="Your Amazon brand">
+  </div>
+  <div class="form-row">
+    <div class="form-group">
+      <label>Primary Marketplace</label>
+      <select name="marketplace">
+        <option>Amazon India</option>
+        <option>Amazon US</option>
+        <option>Amazon UK</option>
+        <option>Amazon UAE</option>
+        <option>Multiple</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Monthly Ad Spend (approx.)</label>
+      <select name="ad_spend">
+        <option>Under &#8377;40,000</option>
+        <option>&#8377;40,000 &ndash; &#8377;1L</option>
+        <option>&#8377;1L &ndash; &#8377;3L</option>
+        <option>&#8377;3L &ndash; &#8377;10L</option>
+        <option>&#8377;10L+</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label>What's your biggest PPC challenge? *</label>
+    <textarea name="message" placeholder="Describe your current situation — high ACOS, poor launch results, messy account structure, or anything else." required></textarea>
+  </div>
+  <div class="form-group">
+    <label>Phone / WhatsApp (optional)</label>
+    <input type="tel" name="phone" placeholder="+91 98765 43210">
+  </div>
+  <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:15px;">
+    Send Message &rarr;
+  </button>
+</form>
         </div>
       </div>
       <!-- RIGHT SIDE -->
