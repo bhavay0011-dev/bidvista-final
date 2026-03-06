@@ -281,6 +281,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
   .faq-layout{grid-template-columns:1fr;gap:32px;margin-top:40px;}
   .form-row{grid-template-columns:1fr;}
   .proc-vis{width:100%;box-sizing:border-box;}
+  .pricing-cards{grid-template-columns:1fr!important;}
+  .pricing-card{padding:24px;}
+  .case-inline-grid{grid-template-columns:1fr!important;gap:16px!important;}
+  .metrics-grid{grid-template-columns:repeat(2,1fr)!important;}
   .post-hero{padding:100px 20px 48px;}
   .post-body{padding:0 20px;}
   .post-meta{flex-wrap:wrap;gap:8px;}
@@ -438,7 +442,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
       <h2 style="font-family:Clash Display,sans-serif;font-size:clamp(2rem,3.5vw,2.9rem);font-weight:700;color:var(--white);letter-spacing:-.04em;line-height:1.1;margin-bottom:18px;">Six Accounts, <em style="font-style:normal;color:var(--teal2);">Six Different Problems</em></h2>
       <p style="font-size:1.05rem;color:var(--muted2);line-height:1.75;max-width:540px;width:100%;">No two Amazon accounts fail the same way. These case studies cover the most common structural problems — and how Bidvista solved them.</p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;" class="case-inline-grid">
       
       <div style="background:var(--surface);border:1px solid var(--border);border-radius:20px;overflow:hidden;" class="r">
         <div style="background:linear-gradient(135deg,#0A1840,#0D1F5C);padding:28px 32px 22px;border-bottom:1px solid var(--border);">
@@ -447,7 +451,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
         </div>
         <div style="padding:24px 32px;">
           <p style="font-size:.875rem;color:var(--muted2);line-height:1.7;margin-bottom:20px;">18-SKU account with all products sharing the same campaigns, zero negative keyword management, and 22% of spend going to irrelevant search terms. ACOS stuck at 68–72% despite regular self-management.</p>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;" class="metrics-grid">
             <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;"><div style="font-family:Clash Display,sans-serif;font-size:.95rem;font-weight:700;color:var(--teal2);">70→39%</div><div style="font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">ACOS</div></div>
             <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;"><div style="font-family:Clash Display,sans-serif;font-size:.95rem;font-weight:700;color:var(--teal2);">48→31%</div><div style="font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">TACOS</div></div>
             <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;"><div style="font-family:Clash Display,sans-serif;font-size:.95rem;font-weight:700;color:#34D399;">22→6%</div><div style="font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Wasted Spend</div></div>
@@ -464,7 +468,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
         </div>
         <div style="padding:24px 32px;">
           <p style="font-size:.875rem;color:var(--muted2);line-height:1.7;margin-bottom:20px;">Auto campaign paused six months ago because "it had high ACOS" — eliminating the brand's primary discovery mechanism. Same 35 keywords running since launch. Revenue flatlined despite budget increases.</p>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;" class="metrics-grid">
             <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;"><div style="font-family:Clash Display,sans-serif;font-size:.95rem;font-weight:700;color:#34D399;">+80%</div><div style="font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Revenue</div></div>
             <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;"><div style="font-family:Clash Display,sans-serif;font-size:.95rem;font-weight:700;color:var(--teal2);">41→38%</div><div style="font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">ACOS</div></div>
             <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;"><div style="font-family:Clash Display,sans-serif;font-size:.95rem;font-weight:700;color:#34D399;">35→112</div><div style="font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Keywords</div></div>
@@ -481,7 +485,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
         </div>
         <div style="padding:24px 32px;">
           <p style="font-size:.875rem;color:var(--muted2);line-height:1.7;margin-bottom:20px;">Brand-new listing with 0 reviews, 0 organic rank, competing against established players. CVR at launch was 4%. Challenge: build enough velocity and rank to become organically viable within 75 days.</p>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;" class="metrics-grid">
             <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;"><div style="font-family:Clash Display,sans-serif;font-size:.95rem;font-weight:700;color:#34D399;">0→12</div><div style="font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Page-1 KWs</div></div>
             <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;"><div style="font-family:Clash Display,sans-serif;font-size:.95rem;font-weight:700;color:var(--teal2);">65→28%</div><div style="font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">TACOS</div></div>
             <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;"><div style="font-family:Clash Display,sans-serif;font-size:.95rem;font-weight:700;color:#34D399;">4→11%</div><div style="font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">CVR</div></div>
@@ -498,7 +502,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
         </div>
         <div style="padding:24px 32px;">
           <p style="font-size:.875rem;color:var(--muted2);line-height:1.7;margin-bottom:20px;">Four years of unstructured growth: 110+ campaigns, no naming conventions, duplicate keywords. Blended ACOS looked fine — SKU-level analysis revealed 30% of spend funding negative-margin products.</p>
-          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;">
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;" class="metrics-grid">
             <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;"><div style="font-family:Clash Display,sans-serif;font-size:.95rem;font-weight:700;color:var(--teal2);">31→20%</div><div style="font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">TACOS</div></div>
             <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;"><div style="font-family:Clash Display,sans-serif;font-size:.95rem;font-weight:700;color:#34D399;">+48%</div><div style="font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Hero SKU Rev</div></div>
             <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 8px;text-align:center;"><div style="font-family:Clash Display,sans-serif;font-size:.95rem;font-weight:700;color:#34D399;">₹80K</div><div style="font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;">Recovered/Mo</div></div>

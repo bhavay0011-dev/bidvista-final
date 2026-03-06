@@ -301,6 +301,10 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
   .faq-layout{grid-template-columns:1fr;gap:32px;margin-top:40px;}
   .form-row{grid-template-columns:1fr;}
   .proc-vis{width:100%;box-sizing:border-box;}
+  .pricing-cards{grid-template-columns:1fr!important;}
+  .pricing-card{padding:24px;}
+  .case-inline-grid{grid-template-columns:1fr!important;gap:16px!important;}
+  .metrics-grid{grid-template-columns:repeat(2,1fr)!important;}
   .post-hero{padding:100px 20px 48px;}
   .post-body{padding:0 20px;}
   .post-meta{flex-wrap:wrap;gap:8px;}
@@ -483,14 +487,14 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
     <div style="background:linear-gradient(135deg,#0A1530,var(--surface));border:1px solid var(--border);border-radius:24px;padding:48px;margin-top:56px;position:relative;overflow:hidden;" class="r">
       <div style="position:absolute;top:-80px;right:-80px;max-width:300px;width:100%;height:300px;background:radial-gradient(circle,rgba(14,165,233,.08),transparent 65%);"></div>
       <div style="position:relative;z-index:1;">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;" class="two-col-grid">
           <div>
             <div class="eyebrow">Included With All Plans</div>
             <h2 style="font-family:Clash Display,sans-serif;font-size:1.7rem;font-weight:700;color:var(--white);letter-spacing:-.04em;line-height:1.1;margin-bottom:14px;">Professional Tools, <em style="font-style:normal;color:var(--teal2);">No Add-Ons</em></h2>
             <p style="font-size:.9rem;color:var(--muted2);line-height:1.7;">Every tool used to manage your account is included in the Bidvista fee — no hidden software costs passed to the client.</p>
           </div>
           <div>
-            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px;">
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px;" class="metrics-grid">
               <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px 10px;text-align:center;font-size:.8rem;font-weight:600;color:var(--muted2);transition:all .2s;" onmouseover="this.style.borderColor='rgba(14,165,233,.3)';this.style.color='#7DD3FC'" onmouseout="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#8B9DC4'">🔬 Helium 10</div>
               <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px 10px;text-align:center;font-size:.8rem;font-weight:600;color:var(--muted2);transition:all .2s;" onmouseover="this.style.borderColor='rgba(14,165,233,.3)';this.style.color='#7DD3FC'" onmouseout="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#8B9DC4'">📊 Data Dive</div>
               <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px 10px;text-align:center;font-size:.8rem;font-weight:600;color:var(--muted2);transition:all .2s;" onmouseover="this.style.borderColor='rgba(14,165,233,.3)';this.style.color='#7DD3FC'" onmouseout="this.style.borderColor='rgba(255,255,255,.06)';this.style.color='#8B9DC4'">📈 DataRova</div>
