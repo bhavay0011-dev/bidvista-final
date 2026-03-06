@@ -300,8 +300,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
   .contact-card{padding:28px 20px;}
   .faq-layout{grid-template-columns:1fr;gap:32px;margin-top:40px;}
   .form-row{grid-template-columns:1fr;}
-  .two-col-grid{grid-template-columns:1fr;gap:40px;}
-  .proc-vis{width:100%;}
+  .proc-vis{width:100%;box-sizing:border-box;}
   .post-hero{padding:100px 20px 48px;}
   .post-body{padding:0 20px;}
   .post-meta{flex-wrap:wrap;gap:8px;}
@@ -355,7 +354,8 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
 }
 
 
-.two-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.two-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+@media(max-width:768px){.two-col-grid{grid-template-columns:1fr!important;gap:32px!important;}.proc-vis{width:100%;margin-top:8px;}}
 </style>
 </head>
 <body>
