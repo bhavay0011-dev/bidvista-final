@@ -276,7 +276,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
 <section class="sec">
   <div class="wrap">
     <div class="contact-grid">
-    <form id="cf" action="https://formspree.io/f/xykngvlj" method="POST">
+  <form id="cf" action="https://formspree.io/f/xykngvlj" method="POST">
   <div class="form-row">
     <div class="form-group"><label>Your Name *</label><input type="text" name="name" placeholder="Ravi Kumar" required></div>
     <div class="form-group"><label>Email Address *</label><input type="email" name="email" placeholder="you@example.com" required></div>
@@ -304,8 +304,49 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
   </div>
   <div class="form-group"><label>What's your biggest PPC challenge? *</label><textarea name="message" placeholder="Describe your current situation — high ACOS, poor launch results, messy account structure, or anything else." required></textarea></div>
   <div class="form-group"><label>Phone / WhatsApp (optional)</label><input type="tel" name="phone" placeholder="+91 98765 43210"></div>
-  <button type="submit" class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:15px;">Send Message</button>
+  <div id="cf-status" style="display:none;padding:12px 16px;border-radius:8px;font-size:.875rem;margin-bottom:16px;"></div>
+  <button type="submit" id="cf-btn" class="btn-primary" style="width:100%;justify-content:center;font-size:1rem;padding:15px;">Send Message →</button>
 </form>
+
+<script>
+  const form = document.getElementById('cf');
+  const btn  = document.getElementById('cf-btn');
+  const status = document.getElementById('cf-status');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        status.style.display = 'block';
+        status.style.background = 'rgba(34,197,94,.15)';
+        status.style.color = '#4ade80';
+        status.style.border = '1px solid rgba(34,197,94,.3)';
+        status.textContent = '✅ Message sent! We'll reply within 1 business day.';
+        form.reset();
+        btn.textContent = 'Message Sent ✓';
+      } else {
+        throw new Error('Server error');
+      }
+    } catch (err) {
+      status.style.display = 'block';
+      status.style.background = 'rgba(239,68,68,.15)';
+      status.style.color = '#f87171';
+      status.style.border = '1px solid rgba(239,68,68,.3)';
+      status.textContent = '❌ Something went wrong. Please try again or use WhatsApp.';
+      btn.disabled = false;
+      btn.textContent = 'Send Message →';
+    }
+  });
+</script>
         </div>
       </div>
       <!-- RIGHT SIDE -->
