@@ -114,7 +114,7 @@ body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#060C1C;col
 .eyebrow::before{content:'';width:24px;height:2px;background:var(--teal);border-radius:1px;}
 .h2{font-family:'Clash Display',sans-serif;font-size:clamp(2rem,3.5vw,2.9rem);font-weight:700;color:var(--white);letter-spacing:-.04em;line-height:1.1;margin-bottom:18px;}
 .h2 em{font-style:normal;color:var(--teal2);}
-.body-text{font-size:1.05rem;color:var(--muted2);line-height:1.75;max-width:540px;}
+.body-text{font-size:1.05rem;color:var(--muted2);line-height:1.75;max-width:540px;width:100%;}
 
 /* ── SCROLL REVEAL ── */
 .r{opacity:0;transform:translateY(32px);transition:opacity .65s var(--ease),transform .65s var(--ease);}
@@ -147,7 +147,7 @@ body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:#060C1C;col
 .page-hero .eyebrow{justify-content:center;margin:0 auto 20px;}
 .page-hero h1{font-family:'Clash Display',sans-serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:700;color:#fff;letter-spacing:-.04em;line-height:1.1;margin-bottom:18px;}
 .page-hero h1 em{font-style:normal;color:var(--teal2);}
-.page-hero p{font-size:1.1rem;color:rgba(255,255,255,.65);max-width:560px;margin:0 auto 36px;line-height:1.7;}
+.page-hero p{font-size:1.1rem;color:rgba(255,255,255,.65);max-width:560px;width:100%;margin:0 auto 36px;line-height:1.7;}
 
 /* ── CARD ── */
 .card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px;transition:all .3s var(--ease);position:relative;overflow:hidden;}
@@ -210,7 +210,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
 .cta-sec .wrap{position:relative;z-index:1;}
 .cta-h{font-family:'Clash Display',sans-serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;color:var(--white);letter-spacing:-.04em;line-height:1.08;margin-bottom:18px;}
 .cta-h em{font-style:normal;color:var(--teal2);}
-.cta-p{font-size:1.1rem;color:var(--muted2);line-height:1.72;max-width:500px;margin:0 auto 44px;}
+.cta-p{font-size:1.1rem;color:var(--muted2);line-height:1.72;max-width:500px;width:100%;margin:0 auto 44px;}
 .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
 
 /* ── RESPONSIVE ── */
@@ -300,6 +300,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
   .contact-card{padding:28px 20px;}
   .faq-layout{grid-template-columns:1fr;gap:32px;margin-top:40px;}
   .form-row{grid-template-columns:1fr;}
+  .two-col-grid{grid-template-columns:1fr;gap:40px;}
   .post-hero{padding:100px 20px 48px;}
   .post-body{padding:0 20px;}
   .post-meta{flex-wrap:wrap;gap:8px;}
@@ -352,6 +353,8 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
   .svc-card{padding:16px 12px;}
 }
 
+
+.two-col-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
 </style>
 </head>
 <body>
@@ -384,7 +387,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
     <div class="r" style="margin-bottom:48px;">
       <div class="eyebrow">All Services</div>
       <h2 style="font-family:Clash Display,sans-serif;font-size:clamp(2rem,3.5vw,2.9rem);font-weight:700;color:var(--white);letter-spacing:-.04em;line-height:1.1;margin-bottom:18px;">End-to-End Amazon PPC, <em style="font-style:normal;color:var(--teal2);">Zero Guesswork</em></h2>
-      <p style="font-size:1.05rem;color:var(--muted2);line-height:1.75;max-width:600px;">Every Bidvista engagement begins with understanding before spending. Here is exactly what each service includes.</p>
+      <p style="font-size:1.05rem;color:var(--muted2);line-height:1.75;max-width:600px;width:100%;">Every Bidvista engagement begins with understanding before spending. Here is exactly what each service includes.</p>
     </div>
 
     <div class="svc-full r">
@@ -477,7 +480,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
 
     <!-- TOOLS -->
     <div style="background:linear-gradient(135deg,#0A1530,var(--surface));border:1px solid var(--border);border-radius:24px;padding:48px;margin-top:56px;position:relative;overflow:hidden;" class="r">
-      <div style="position:absolute;top:-80px;right:-80px;width:300px;height:300px;background:radial-gradient(circle,rgba(14,165,233,.08),transparent 65%);"></div>
+      <div style="position:absolute;top:-80px;right:-80px;max-width:300px;width:100%;height:300px;background:radial-gradient(circle,rgba(14,165,233,.08),transparent 65%);"></div>
       <div style="position:relative;z-index:1;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
           <div>
@@ -510,7 +513,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:72px
       <div style="text-align:center;margin-bottom:48px;">
         <div class="eyebrow" style="justify-content:center;">Pricing Philosophy</div>
         <h2 style="font-family:Clash Display,sans-serif;font-size:clamp(2rem,3.5vw,2.9rem);font-weight:700;color:var(--white);letter-spacing:-.04em;line-height:1.1;margin-bottom:14px;">Transparent Engagements, <em style="font-style:normal;color:var(--teal2);">No Lock-In</em></h2>
-        <p style="font-size:1rem;color:var(--muted2);max-width:520px;margin:0 auto;line-height:1.7;">All engagements are custom-scoped after the audit. These are the typical engagement types.</p>
+        <p style="font-size:1rem;color:var(--muted2);max-width:520px;width:100%;margin:0 auto;line-height:1.7;">All engagements are custom-scoped after the audit. These are the typical engagement types.</p>
       </div>
       <div class="pricing-cards">
         <div class="pricing-card">
