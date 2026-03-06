@@ -1,0 +1,69 @@
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 200
+
+[[redirects]]
+  from = "/services"
+  to = "/services.html"
+  status = 200
+
+[[redirects]]
+  from = "/case-studies"
+  to = "/case-studies.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy"
+  to = "/privacy.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-campaign-structure"
+  to = "/blog-campaign-structure.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-negative-keywords"
+  to = "/blog-negative-keywords.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-bid-optimization"
+  to = "/blog-bid-optimization.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-product-launch"
+  to = "/blog-product-launch.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-acos-vs-tacos"
+  to = "/blog-acos-vs-tacos.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-wasted-spend"
+  to = "/blog-wasted-spend.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-search-term-harvesting"
+  to = "/blog-search-term-harvesting.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-portfolio-management"
+  to = "/blog-portfolio-management.html"
+  status = 200
+
+[[redirects]]
+  from = "/blog-sponsored-brands"
+  to = "/blog-sponsored-brands.html"
+  status = 200
